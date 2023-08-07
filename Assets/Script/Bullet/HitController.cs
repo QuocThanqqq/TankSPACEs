@@ -5,11 +5,9 @@ using UnityEngine.Rendering.VirtualTexturing;
 
 public class HitController : MonoBehaviour
 {
-
-
+    
     private void OnSpawned()
     {
-
         StartCoroutine(WaitHit());
     }
 
@@ -17,6 +15,6 @@ public class HitController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         BYPoolManager.poolInstance.DeSpawn("hitEnemy", transform);
-        BYPoolManager.poolInstance.DeSpawn("hitWall", transform);
+       
     }
 }

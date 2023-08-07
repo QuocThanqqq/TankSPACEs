@@ -10,26 +10,24 @@ public class ShootController : MonoBehaviour
 
     [SerializeField] private Transform _firePoint;
     [SerializeField] private WeaponBehaviour _weaponBehaviour;
+    [SerializeField] private ParticleSystem _fireGun;
 
 
   
     public void Start()
     {
         WeaponBehaviour weaponBehaviour = _weaponBehaviour;
-        Debug.Log(weaponBehaviour.name);
         WeaponRecord data = DataManager.Instance.DataGun.weapons.Find(x => x.Name == _weaponBehaviour.name);
-        Debug.Log(data);
         WeaponBehaviour weapon = weaponBehaviour.GetComponent<WeaponBehaviour>();
         Weapon newWeapon = new Weapon();
         newWeapon.WeaponRecord = data;
-        Debug.Log(newWeapon);
         weapon.Init(this, newWeapon);
 
     }
     
     public void Shoot()
-    { 
-        Debug.Log("Shoot");
+    {
+        _fireGun.Play();
         _weaponBehaviour.FirePoint = _firePoint;
         _weaponBehaviour.Attack();
     }

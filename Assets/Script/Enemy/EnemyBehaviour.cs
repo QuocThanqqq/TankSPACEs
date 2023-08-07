@@ -2,51 +2,42 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    public static EnemyBehaviour instance;
+    
+    [SerializeField] private DataEnemys _dataEnemys;
+    [SerializeField] private Slider _sliderHealth;
+    [SerializeField] private float _currentHealth;
+    [SerializeField] private ParticleSystem _particleSystemDie;
 
-    [SerializeField]private DataEnemys dataEnemys;
-    [SerializeField]private Slider sliderHealth;
-    [SerializeField]private Animator anim;
-   
-
-    [SerializeField] private float currentHealth;
-
-    public bool isDie = false;
-
-
-
-
-    void Update()
+    
+    private void Update()
     {
-        sliderHealth.value = currentHealth;
+        _sliderHealth.value = _currentHealth;
     }
 
     public void DataEnemy(DataEnemys _dataEnemys)
     {
-        dataEnemys = _dataEnemys;
-        currentHealth = dataEnemys.health;
+        this._dataEnemys = _dataEnemys;
+        _currentHealth = this._dataEnemys.health;
     }
-
     public void TakeDame(float dameAmount)
     {
-        currentHealth -= dameAmount;
-        if (currentHealth <= 0)
+        _currentHealth -= dameAmount;
+        if (_currentHealth <= 0)
         {
-    
-            isDie = true;
-            anim.Play("Death");
             GetComponent<Collider2D>().enabled = false;
+            _particleSystemDie.Play();
             StartCoroutine(DelayDealth());
         }    
     }
 
     private IEnumerator DelayDealth() 
     {
-       yield return  new WaitForSeconds(1f);
+       yield return  new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -13,6 +14,7 @@ public class ProjectileMover : MonoBehaviour
     public float _bulletDames;
     public string _bulletName;
 
+    
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -23,7 +25,6 @@ public class ProjectileMover : MonoBehaviour
     {
         this._weaponDame = dataBullet;
         _bulletDames = _weaponDame.WeaponRecord.Damage;
-
     }
 
     public void FixedUpdate()
@@ -37,20 +38,20 @@ public class ProjectileMover : MonoBehaviour
         StopCoroutine(DespawnedDelay());
         StartCoroutine(DespawnedDelay());
     }
-    // private void OnCollisionEnter2D(Collision2D collision)
-    // {
-    //     if (collision.gameObject.layer == 6)
-    //     {
-    //         //collision.gameObject.GetComponent<EnemyBehaviour>().TakeDame(mDames);
-    //         BYPoolManager.poolInstance.DeSpawn(_bulletName, transform);
-    //         BYPoolManager.poolInstance.Spawn("hitEnemy").position = transform.position;
-    //     }
-    //     // if(collision.gameObject.layer == 20)
-    //     // {
-    //     //     BYPoolManager.poolInstance.DeSpawn(_bulletName, transform);
-    //     //     BYPoolManager.poolInstance.Spawn("hitWall").position = transform.position;
-    //     // }
-    // }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.GetComponent<EnemyBehaviour>().TakeDame(_bulletDames);
+            BYPoolManager.poolInstance.DeSpawn(_bulletName, transform);
+            BYPoolManager.poolInstance.Spawn("hitEnemy").position = transform.position;
+        }
+
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            BYPoolManager.poolInstance.DeSpawn(_bulletName, transform);
+        }
+    }
     IEnumerator DespawnedDelay()
     {
         yield return new WaitForSeconds(1f);

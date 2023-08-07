@@ -11,8 +11,10 @@ public class TankController : MonoBehaviour
     
     [Header("FIRE")]
     [SerializeField] private ShootController _shootController;
-    [SerializeField] private float fireRate = 1f;
+    [SerializeField] private float fireRate = 2f;
     [SerializeField] private float _timeUntilFire;
+    
+    
 
 
     
@@ -20,7 +22,6 @@ public class TankController : MonoBehaviour
     private float _xMovement;
     private float _yMovement;
     private Vector2 _movement;
-    private bool _mouse = false;
     private Rigidbody2D _rb;
 
     private void Awake()
@@ -33,22 +34,17 @@ public class TankController : MonoBehaviour
         Movement();
         _timeUntilFire += Time.deltaTime;
         if (_timeUntilFire >= 1f / fireRate )
-        {
+        { 
             _shootController.Shoot();
             _timeUntilFire = 0;
         }
     }
-
-    private void FixedUpdate()
-    {
-        _rb.MovePosition(_rb.position + _movement * _speed * Time.fixedDeltaTime);
-    }
-
     private void Movement()
     {
         _xMovement = Input.GetAxisRaw("Horizontal");
         _yMovement = Input.GetAxisRaw("Vertical");
         _movement = new Vector2(_xMovement, _yMovement);
+        _rb.MovePosition(_rb.position + _movement * _speed * Time.fixedDeltaTime);
     }
 
 }
