@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 873981042214497571}
   - component: {fileID: 873981042214497570}
   - component: {fileID: 873981042214497569}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Impact03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4891,7 +4891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 971215899627974144}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FireEngine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4923,7 +4923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8509798574250275414}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4943,7 +4943,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8794341725854912539}
-  - {fileID: 8794341726024684197}
   - {fileID: 8794341727638986601}
   m_Father: {fileID: 8794341726128599121}
   m_RootOrder: 1
@@ -4958,7 +4957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3632756692418511364}
   - component: {fileID: 4352497768173127118}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5047,7 +5046,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 825927623251032540}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DieFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5081,7 +5080,7 @@ GameObject:
   - component: {fileID: 478217795693062816}
   - component: {fileID: 5457570966454805971}
   - component: {fileID: 7878977498672973544}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5157,7 +5156,7 @@ GameObject:
   - component: {fileID: 6424095009495596614}
   - component: {fileID: 4282435490557645902}
   - component: {fileID: 6240347594470948618}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5231,7 +5230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1857624986377746113}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5269,7 +5268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8794341725854912539}
   - component: {fileID: 8794341725854912536}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5343,90 +5342,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &8794341726024684196
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8794341726024684197}
-  - component: {fileID: 8794341726024684218}
-  m_Layer: 0
-  m_Name: Hull
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8794341726024684197
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8794341726024684196}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8509798574250275414}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8794341726024684218
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8794341726024684196}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 4294967295
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: aef66197c6706264793573979eddcf7f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &8794341726128599120
 GameObject:
   m_ObjectHideFlags: 0
@@ -5438,7 +5353,8 @@ GameObject:
   - component: {fileID: 8794341726128599121}
   - component: {fileID: 381081237241371573}
   - component: {fileID: 3712916600376240555}
-  m_Layer: 0
+  - component: {fileID: 350343635561958994}
+  m_Layer: 6
   m_Name: EnemySmall
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -5477,11 +5393,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dataEnemys:
-    name: 
-    health: 0
-  _sliderHealth: {fileID: 4352497768173127118}
+    Health: 0
+    Sprite: {fileID: 0}
   _currentHealth: 0
+  _sliderHealth: {fileID: 4352497768173127118}
   _particleSystemDie: {fileID: 873981042214497570}
+  _sprite: {fileID: 350343635561958994}
+  _projectile: {fileID: 8520548064545435269, guid: b7fff11cdcd2d054e9083ad9e02dacf7,
+    type: 3}
+  _firePos: {fileID: 8794341726143478178}
 --- !u!61 &3712916600376240555
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5498,16 +5418,68 @@ BoxCollider2D:
   m_Offset: {x: -0.00000023841858, y: 0.15834767}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 2.2667823, y: 2.2667828}
   m_EdgeRadius: 0
+--- !u!212 &350343635561958994
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8794341726128599120}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: be7a40e048917e14b92dda9a1144294f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.56, y: 2.56}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &8794341726143478189
 GameObject:
   m_ObjectHideFlags: 0
@@ -5518,8 +5490,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8794341726143478178}
   - component: {fileID: 8794341726143478179}
-  m_Layer: 0
-  m_Name: Gun
+  m_Layer: 6
+  m_Name: GunEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5580,7 +5552,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: b3d5a576150683f42a18c0ceb3d0203f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5602,7 +5574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8794341726662789053}
   - component: {fileID: 8794341726662789042}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GunConnector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5686,7 +5658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8794341727638986601}
   - component: {fileID: 8794341727638986606}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5708,7 +5680,7 @@ Transform:
   - {fileID: 8794341726143478178}
   - {fileID: 8794341726662789053}
   m_Father: {fileID: 8509798574250275414}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8794341727638986606
 SpriteRenderer:
@@ -5774,7 +5746,7 @@ GameObject:
   - component: {fileID: 776641620382569237}
   - component: {fileID: 3803370539140020191}
   - component: {fileID: 687220403013081229}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5964,6 +5936,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Style1JetEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3003170136095214662, guid: d2a75945cd9541e439aa4db0ae60cd38,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2a75945cd9541e439aa4db0ae60cd38, type: 3}

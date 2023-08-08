@@ -4,16 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Planet
   - Enemy
-  - Bonus
-  - Projectile
-  - Score
-  - Health
-  - CoinsText
-  - Coin
-  - PlayerRay
-  - Rocket
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -21,9 +13,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Enemy
+  - EnemyBullet
+  - TankBullet
   - 
   - 
   - 

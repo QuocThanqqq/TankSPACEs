@@ -13,15 +13,27 @@ MonoBehaviour:
   m_Name: DataEnemy
   m_EditorClassIdentifier: 
   Enemys:
-  - name: EnemyA
-    health: 100
-  - name: EnemyB
-    health: 120
-  - name: EnemyC
-    health: 120
-  - name: EnemyD
-    health: 120
-  - name: EnemyE
-    health: 120
-  - name: EnemyF
-    health: 120
+  - Name: EnemyA
+    Health: 100
+    Sprite: {fileID: 21300000, guid: aef66197c6706264793573979eddcf7f, type: 3}
+    Dame: 100
+  - Name: EnemyB
+    Health: 120
+    Sprite: {fileID: 21300000, guid: be7a40e048917e14b92dda9a1144294f, type: 3}
+    Dame: 100
+  - Name: EnemyC
+    Health: 150
+    Sprite: {fileID: 21300000, guid: 86d685eee34509a4580b0a78fee15065, type: 3}
+    Dame: 100
+  - Name: EnemyD
+    Health: 100
+    Sprite: {fileID: 21300000, guid: be7a40e048917e14b92dda9a1144294f, type: 3}
+    Dame: 100
+  - Name: EnemyE
+    Health: 90
+    Sprite: {fileID: 21300000, guid: aef66197c6706264793573979eddcf7f, type: 3}
+    Dame: 100
+  - Name: EnemyF
+    Health: 50
+    Sprite: {fileID: 21300000, guid: 86d685eee34509a4580b0a78fee15065, type: 3}
+    Dame: 100
