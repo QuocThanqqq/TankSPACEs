@@ -14,23 +14,25 @@ public class Weapon
 [System.Serializable]
 public class WeaponBehaviour : MonoBehaviour
 {
-    public ShootController ShootController;
+    [FormerlySerializedAs("ShootController")] public WeaponController _weaponController;
     public IWeapon TypeDamage;
     public WeaponType WeaponType;
-
-    public Transform FirePoint;
+    
+    public Transform MidPoint;
+    public Transform RightPoint;
+    public Transform LeftPoint;
+    
     public Transform BulletPrefab;
     public Weapon Data;
 
     public string mName;
     public float mDame;
-    public void Init(ShootController _ShootController, Weapon dataNew)
+    public void Init(WeaponController weaponController, Weapon dataNew)
     {
         this.Data = dataNew;
-        
         mName = Data.WeaponRecord.Name;
         mDame= Data.WeaponRecord.Damage;
-        this.ShootController = _ShootController;
+        this._weaponController = weaponController;
         InitData();
     }
     public virtual void InitData()
@@ -48,5 +50,6 @@ public class WeaponBehaviour : MonoBehaviour
 public enum WeaponType
 {
     FireGun,
+    LaserGun
 }
 

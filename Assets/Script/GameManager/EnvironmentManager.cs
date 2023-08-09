@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UIElements;
@@ -33,7 +34,9 @@ public class EnvironmentManager : MonoBehaviour
     [Header("SPAWN WAVE SETTINGS")]
     [SerializeField] private int _numWaves;
     [SerializeField] private float _timeBetweenWaves;
-    
+
+    [Header("POWER ITEM")] 
+    [SerializeField] private GameObject _powerItems;
 
 
 
@@ -41,6 +44,7 @@ public class EnvironmentManager : MonoBehaviour
     {
         SpawnTank();
         await UniTask.Delay(3000);
+        SpawnPower();
         await SpawnWaves();
     }
 
@@ -76,6 +80,16 @@ public class EnvironmentManager : MonoBehaviour
             await UniTask.Delay(2500);
         }
     }
+    
+    // Spawn PowerItem
+    private async void SpawnPower()
+    {
+        while (true)
+        {
+            Instantiate(_powerItems,new Vector2(Random.Range(-2f,2f),5f),quaternion.identity);
+            await UniTask.Delay(10000);
+        }
+    }
 
     // Draw a line for Enemy
     private void EnemyMove(EnemyBehaviour enemy)
@@ -88,4 +102,6 @@ public class EnvironmentManager : MonoBehaviour
         Vector3[] path = new Vector3[] { _startPoints[randomIndex].position, _controlPoints[randomIndex].position, _endPoints[randomIndex].position };
         enemy.transform.DOPath(path, _timeMove, PathType.CatmullRom, PathMode.TopDown2D).SetEase(Ease.Linear).OnComplete(() => Destroy(enemy.gameObject));
     }
+    
+    
 }

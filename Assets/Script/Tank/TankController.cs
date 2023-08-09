@@ -6,36 +6,39 @@ using UnityEngine;
 using UnityEngine.Serialization;
 
 public class TankController : MonoBehaviour
-{ 
+{
     [Header("TANK MOVEMENT")]
-    [SerializeField] private float _speed ;
+    [SerializeField] private float _speed;
     
+    [FormerlySerializedAs("_shootController")]
     [Header("FIRE")]
-    [SerializeField] private ShootController _shootController;
-    [SerializeField] private float fireRate = 2f;
+    [SerializeField] private WeaponController _weaponController;
+    [SerializeField] private float _fireRate;
     [SerializeField] private float _timeUntilFire;
 
     [Header("HEALTH")] 
     [SerializeField] private float _health = 10;
-
     [SerializeField] private bool _isDie;
     
-    [Header("FX")] [SerializeField] private ParticleSystem _particleDie;
-    
+    [Header("FX")] 
+    [SerializeField] private ParticleSystem _particleDie;
+
+
     
     private float _xMovement;
     private float _yMovement;
     private Vector2 _movement;
     private Rigidbody2D _rb;
 
+  
+    
     private void Awake()
     {
         _isDie = false;
         _rb = GetComponent<Rigidbody2D>();
+     
     }
-
     
-
     private void Update()
     {
         Movement();
@@ -45,11 +48,11 @@ public class TankController : MonoBehaviour
     private void Shooter()
     {
         _timeUntilFire += Time.deltaTime;
-        if (_timeUntilFire >= 1f / fireRate && _isDie == false )
-        { 
-            _shootController.Shoot();
-            _timeUntilFire = 0;
-        }
+            if (_timeUntilFire >= 1f / _fireRate && _isDie == false )
+            { 
+                _weaponController.WeaponAttack();
+                _timeUntilFire = 0;
+            }
     }
     private void Movement()
     {
@@ -67,7 +70,7 @@ public class TankController : MonoBehaviour
                 _isDie = true;
                 _particleDie.Play();
                 await UniTask.Delay(500);
-                Destroy(gameObject);
             }
+            Destroy(gameObject);
     }
 }

@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapons:
   - ID: G1
-    Name: Gun
+    Name: DefaultGun
     Damage: 50
+  - ID: G2
+    Name: PlusGun
+    Damage: 100
