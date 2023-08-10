@@ -10,8 +10,6 @@ public class TankController : MonoBehaviour
     [Header("TANK MOVEMENT")]
     [SerializeField] private float _speed;
     
-    [Header("HEALTH")] 
-    [SerializeField] private float _health = 10;
     [SerializeField] private bool _isDie;
     
     [Header("FX")] 
@@ -22,15 +20,12 @@ public class TankController : MonoBehaviour
     private float _yMovement;
     private Vector2 _movement;
     private Rigidbody2D _rb;
-
-
     
     private void Awake()
     {
         _isDie = false;
         _rb = GetComponent<Rigidbody2D>();
     }
-
     
     private void Update()
     {
@@ -55,15 +50,12 @@ public class TankController : MonoBehaviour
         _rb.MovePosition(_rb.position + _movement * _speed * Time.fixedDeltaTime);
     }
 
-    public  async void TakeDameTank(float dame)
+    public  async void TakeDameTank()
     {
-        _health -= dame;
-            if (_health <= 0)
-            {
-                _isDie = true;
-                _particleDie.Play();
-                await UniTask.Delay(500);
-                Destroy(gameObject);
-            }
+        _isDie = true;
+        _particleDie.Play();
+        await UniTask.Delay(500);
+        Destroy(gameObject);
+            
     }
 }

@@ -9,7 +9,7 @@ public class BossBullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<TankController>().TakeDameTank(_dameEnemy);
+            collision.gameObject.GetComponent<TankController>().TakeDameTank();
             Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("Wall"))

@@ -83,7 +83,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<TankController>().TakeDameTank(_dataEnemys.Dame);
+            collision.gameObject.GetComponent<TankController>().TakeDameTank();
             _particleSystemDie.Play();
              DelayDeath();
         }

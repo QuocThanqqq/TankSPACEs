@@ -22,6 +22,10 @@ public class BossManager : MonoBehaviour
     [Header("HEALTH")] 
     [SerializeField] private float _maxHealth;
     [SerializeField] private float _currentHealth;
+
+    [Header("VFX")] 
+    [SerializeField] private ParticleSystem _vfxDie;
+    
      private Transform _target;
      private float _timeUntilFire;
 
@@ -87,6 +91,7 @@ public class BossManager : MonoBehaviour
         if (_currentHealth <= 0)
         {
             GetComponent<Collider2D>().enabled = false;
+            _vfxDie.Play();
             DelayDeath();
         }    
     }
