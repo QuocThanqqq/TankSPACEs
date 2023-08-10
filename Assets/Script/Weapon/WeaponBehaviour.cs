@@ -27,11 +27,13 @@ public class WeaponBehaviour : MonoBehaviour
 
     public string mName;
     public float mDame;
+    public float mFireRate;
     public void Init(WeaponController weaponController, Weapon dataNew)
     {
         this.Data = dataNew;
         mName = Data.WeaponRecord.Name;
         mDame= Data.WeaponRecord.Damage;
+        mFireRate = Data.WeaponRecord.FireRate;
         this._weaponController = weaponController;
         InitData();
     }

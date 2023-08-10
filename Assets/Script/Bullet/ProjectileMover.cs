@@ -15,12 +15,7 @@ public class ProjectileMover : MonoBehaviour
     public string _bulletName;
 
     
-    void Start()
-    {
-        _rb = GetComponent<Rigidbody2D>();
-       
-    }
-
+   
     public void Init(Weapon dataBullet)
     {
         this._weaponDame = dataBullet;
@@ -43,6 +38,13 @@ public class ProjectileMover : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<EnemyBehaviour>().TakeDame(_bulletDames);
+           // collision.gameObject.GetComponent<BossManager>().TakeDame(_bulletDames);
+            BYPoolManager.poolInstance.DeSpawn(_bulletName, transform);
+            BYPoolManager.poolInstance.Spawn("hitEnemy").position = transform.position;
+        }
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            collision.gameObject.GetComponent<BossManager>().TakeDame(_bulletDames);
             BYPoolManager.poolInstance.DeSpawn(_bulletName, transform);
             BYPoolManager.poolInstance.Spawn("hitEnemy").position = transform.position;
         }

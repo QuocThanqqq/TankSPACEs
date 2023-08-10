@@ -12,8 +12,9 @@ public class EnemyBehaviour : MonoBehaviour
     public static EnemyBehaviour Instance;
     [Header("DATA")]
     public DataEnemys _dataEnemys;
-    
-    [Header("HEALTH")]
+
+    [Header("HEALTH")] 
+    [SerializeField] private float _maxHealth;
     [SerializeField] private float _currentHealth;
     [SerializeField] private Slider _sliderHealth;
     
@@ -28,14 +29,11 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] private GameObject _projectile;
     [SerializeField] private Transform _firePos;
     
-
-
-  
-
+    
     private  void Start()
     {
         Invoke("ActivateShooting", Random.Range(5f,6f));
-       
+        _sliderHealth.maxValue = _maxHealth;
     }
 
     private void Update()
@@ -46,7 +44,8 @@ public class EnemyBehaviour : MonoBehaviour
     public void DataEnemy(DataEnemys _dataEnemys)
     {
         this._dataEnemys = _dataEnemys;
-        _currentHealth = this._dataEnemys.Health;
+        _maxHealth = this._dataEnemys.Health;
+        _currentHealth = _maxHealth;
         _sprite.sprite = _dataEnemys.Sprite;
     }
     public void TakeDame(float dameAmount)
@@ -56,7 +55,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             GetComponent<Collider2D>().enabled = false;
             _particleSystemDie.Play();
-            DelayDealth();
+            DelayDeath();
         }    
     }
 
@@ -74,7 +73,7 @@ public class EnemyBehaviour : MonoBehaviour
             yield return new WaitForSeconds(delay);
         }
     }
-    private async void DelayDealth()
+    private async void DelayDeath()
     {
         await UniTask.Delay(500);
         Destroy(gameObject);
@@ -86,7 +85,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             collision.gameObject.GetComponent<TankController>().TakeDameTank(_dataEnemys.Dame);
             _particleSystemDie.Play();
-             DelayDealth();
+             DelayDeath();
         }
     }
 }

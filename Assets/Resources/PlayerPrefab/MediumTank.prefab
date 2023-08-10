@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6762183978857517213}
   - component: {fileID: 5117111983706189844}
   - component: {fileID: 6866919958340980634}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlusGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7854243482961161806}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MidPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2582377798760857554}
   - component: {fileID: 2582377798760857553}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2582377799309996917}
   - component: {fileID: 2582377799309996916}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2582377799895948773}
   - component: {fileID: 2582377799895948772}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GunConnector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2582377799922350869}
   - component: {fileID: 2582377799922350868}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TowerGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 2582377800182460348}
   - component: {fileID: 2582377800182460347}
   - component: {fileID: 2582377800182460350}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DefaultGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,7 +610,7 @@ GameObject:
   - component: {fileID: 2582377800678570825}
   - component: {fileID: 2582377800678570824}
   - component: {fileID: 2582377800678570827}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MediumTank
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -732,7 +732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8240837619295953222}
   - component: {fileID: 3621986718436508265}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GunConnector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -815,7 +815,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5908416372481131302}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -847,7 +847,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1567036446790983275}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -882,7 +882,7 @@ GameObject:
   - component: {fileID: 6978996727551791490}
   - component: {fileID: 8205745794502889316}
   - component: {fileID: 5615371053999168646}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Central_Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5764,7 +5764,7 @@ GameObject:
   - component: {fileID: 5489419198695201989}
   - component: {fileID: 5691492347012575077}
   - component: {fileID: 5691983241417000469}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FX_Power
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10443,7 +10443,7 @@ GameObject:
   - component: {fileID: 5490182674895359753}
   - component: {fileID: 5692213021762170503}
   - component: {fileID: 5691765931629679513}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CFX4 Stars Inner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15046,7 +15046,7 @@ GameObject:
   - component: {fileID: 5489497046652752339}
   - component: {fileID: 5692045721464612611}
   - component: {fileID: 5691199915745299227}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CFX4 Stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19649,7 +19649,7 @@ GameObject:
   - component: {fileID: 5489429653545821853}
   - component: {fileID: 5692371155324149941}
   - component: {fileID: 5691358087027380839}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CFX4 Rays
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24216,7 +24216,7 @@ GameObject:
   - component: {fileID: 5489822908491586859}
   - component: {fileID: 5691479690682900989}
   - component: {fileID: 5691735977410748517}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CFX4 Inner Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28889,7 +28889,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6102681251158690986}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28921,7 +28921,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6102681251679184808}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MachineBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28955,7 +28955,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6102681252192307821}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Engine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28989,7 +28989,7 @@ GameObject:
   - component: {fileID: 8228767606858024284}
   - component: {fileID: 5751938865911061523}
   - component: {fileID: 654116724396048042}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Central_Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33871,7 +33871,7 @@ GameObject:
   - component: {fileID: 7963294953324194228}
   - component: {fileID: 7805225818603289632}
   - component: {fileID: 7806836568552937084}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Central_Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38753,7 +38753,7 @@ GameObject:
   - component: {fileID: 8976622997828298396}
   - component: {fileID: 8976622997828298397}
   - component: {fileID: 8976622997828298398}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FX_Die
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43714,7 +43714,7 @@ PrefabInstance:
     - target: {fileID: 7602363237473255078, guid: 3605710cf3d2ecb489208a634682e736,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7602363237473255079, guid: 3605710cf3d2ecb489208a634682e736,
         type: 3}

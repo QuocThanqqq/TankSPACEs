@@ -23,6 +23,12 @@ public class EnvironmentManager : MonoBehaviour
     [Header("ENEMY")] 
     [SerializeField] private EnemyBehaviour _enemyPrefab;
     [SerializeField] private Transform _enemySpawnPos;
+ 
+
+    [Header("BOSS")] 
+    [SerializeField] private BossManager _bossPrefab;
+    [SerializeField] private Transform _bossSpawnPos;
+
     
 
     [Header("MOVE WAVE")]
@@ -42,10 +48,12 @@ public class EnvironmentManager : MonoBehaviour
 
     private async void Start()
     {
+  
         SpawnTank();
         await UniTask.Delay(3000);
         SpawnPower();
         await SpawnWaves();
+        
     }
 
     // Spawn Tank
@@ -54,6 +62,13 @@ public class EnvironmentManager : MonoBehaviour
         TankController tank =  Instantiate(_tankPrefab, _playerSpawnPos.position, Quaternion.identity);
         tank.transform.DOMoveX(0, 1f);
         tank.transform.DOMoveY(-4f, 2f);
+    }
+    
+    private void SpawnBoss()
+    { 
+        BossManager boss =  Instantiate(_bossPrefab, _bossSpawnPos.position, Quaternion.Euler(0,0,-180f));
+        //boss.transform.DOMoveX(0, 1f);
+        boss.transform.DOMoveY(3, 2f);
     }
     // Spawn Waves Enemy
     private async UniTask SpawnWaves()
@@ -66,6 +81,8 @@ public class EnvironmentManager : MonoBehaviour
                 await UniTask.Delay((int)(_timeBetweenWaves * 1000));
             }
         }
+
+        SpawnBoss();
     }
     
     // Spawn Enemy
@@ -102,6 +119,5 @@ public class EnvironmentManager : MonoBehaviour
         Vector3[] path = new Vector3[] { _startPoints[randomIndex].position, _controlPoints[randomIndex].position, _endPoints[randomIndex].position };
         enemy.transform.DOPath(path, _timeMove, PathType.CatmullRom, PathMode.TopDown2D).SetEase(Ease.Linear).OnComplete(() => Destroy(enemy.gameObject));
     }
-    
     
 }

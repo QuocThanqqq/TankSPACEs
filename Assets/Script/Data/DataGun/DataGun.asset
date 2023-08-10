@@ -16,6 +16,8 @@ MonoBehaviour:
   - ID: G1
     Name: DefaultGun
     Damage: 50
+    FireRate: 1
   - ID: G2
     Name: PlusGun
     Damage: 100
+    FireRate: 3

@@ -12,6 +12,8 @@ public class WeaponRecord
     public string Name;
 
     public float Damage;
+
+    public float FireRate;
 }
 
 [CreateAssetMenu(fileName = "DataGun", menuName = "DataGun")]
